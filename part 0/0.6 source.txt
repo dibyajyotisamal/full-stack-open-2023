@@ -1,0 +1,9 @@
+    participant browser
+    participant server
+    
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    
+	server-->>browser: HTTP Status code 201, Created
+server-->> browser: {"message":"note created"}
+
+Note right of browser: The browser executes the javascript and to create a <li> element in the <ul> and add to the webpage accordingly.
